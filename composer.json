@@ -28,7 +28,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "ApplicationTest\\": "module/Application/test/"
+            "ApplicationTest\\": "module/Application/test/",
+            "AlbumTest\\": "module/Album/test/"
         }
     },
     "scripts": {
@@ -44,7 +45,7 @@
             "php -r 'if (file_exists(\"CHANGELOG.md\")) unlink(\"CHANGELOG.md\");'"
         ],
         "serve": "php -S 127.0.0.1:8080 -t public",
-        "test": "vendor/bin/phpunit",
+        "test": "vendor/bin/phpunit --testsuite",
         "static-analysis": "vendor/bin/psalm --shepherd --stats"
     },
     "scripts-descriptions": {
@@ -55,5 +56,10 @@
         "development-status": "Detail whether or not the application is in development mode.",
         "serve": "Start the built-in PHP web server and serve the application.",
         "test": "Run unit tests."
+    },
+    "require-dev": {
+        "laminas/laminas-test": "^3.5",
+        "phpunit/phpunit": "^9.5",
+        "phpspec/prophecy-phpunit": "^2.0"
     }
 }

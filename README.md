@@ -12,6 +12,8 @@ Laminas album tutorial done with MySQL database instead of Sqlite.
 > - You can change MYSQL configuration in config/autoload.php. Then you will have to make `composer dump-autoload`. Then, for be sure of applied modifications,
 > you can delete /data/cache/module-config-cache.application.config.cache.php for generate cache with your own configuration.
 
+> - Unit tests has been added to Album module, you can try launch them by using `composer test Album`.
+
 ### Contact me
 
 - Discord: Bast#0207
